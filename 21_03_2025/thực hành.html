@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <table border="0px" cellspacing="0px" align="center">
+            <th align="center" bgcolor="orange" colspan="2" height="30px">PT Ứng dụng Web-THIẾT KẾ FORM ĐƠN GIẢN </th>
+            <tr height="50px">
+                <td>Họ và tên</td>
+                <td><input type="text" name="ho_ten" size="10" maxlength="70%" /></td>
+            </tr>
+            <tr height="50px">
+                <td>Email</tdS>
+                <td><input type="email" name="email" id="email" placeholder="Email"/></td>
+            </tr>
+            <tr height="50px">
+                <td>Số điện thoại</td>
+                <td><input type="text" name="sdt" size="10" maxlength="70%"  /></td>
+            </tr>
+            <tr height="50px">
+                <td>Quê quán</td>
+                <td><select name="thanh_pho">  
+                    <option value="">--Chọn thành phố---</option>  
+                    <option value="hanoi">Hà Nội</option>  
+                    <option value="hochiminh">TP Hồ Chí Minh</option>  
+                    <option value="thanhhoa" selected>Thanh Hoá</option> 
+                    <option value="binhphuoc">Bình Phước</option>   
+                  </select></td>
+            </tr>
+            <tr height="50px">
+                <td>Giới tính</td>
+                <td><input type="radio" name="gioitinh" value="Nam" checked="checked" /> Nam 
+                    <input type="radio" name="gioitinh" value="Nữ" />Nữ </td>
+            </tr>
+            <tr height="50px">
+                <td>Kỹ năng</td>
+                <td><input type="checkbox" name="kynang" value="HTML" checked="checked" /> HTML
+                    <input type="checkbox" name="kynang" value="JS" /> JS
+                    <input type="checkbox" name="kynang" value="CSS"  /> CSS
+                    <input type="checkbox" name="kynang" value="BOOTSTRAP" /> BOOTSTRAP</td>
+            </tr>
+            <tr height="50px">
+                <td>Ngày sinh</td>
+                <td><input type="date" name="date_of_birth" id="date_of_birth" maxlength="60"></td>
+            </tr>
+            <tr height="50px">
+                <td>Giới thiệu bản thân</td>
+                <td><textarea name="about" rows="4"></textarea></td>
+            </tr>
+            <td height="50px" colspan="2" bgcolor="orange" align="center"><button>Submit</button> <button>Reset</button></td>
+        </table>
+    </form>
+</body>
+</html>
