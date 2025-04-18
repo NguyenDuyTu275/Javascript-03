@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ của tôi</title>
+    <style>
+        #header{
+            background-color: aqua;
+            text-align: center;
+            width: 100%;
+            height: 30%;
+            font-size: larger;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing:border-box;
+        }
+        #chucnang{
+            background-color: gray;
+            text-align: center;
+            }
+        #chucnang ul {
+            list-style: none;
+            padding: 0;
+            border: 0;
+            margin: 0;
+        }
+        #chucnang li {
+            display: inline-block;
+            margin: 10px;
+            color: white;
+            font-size: 20px;
+
+        }
+        #thanhben{
+            background-color: gray;
+            font-size: x-large;
+            flex: 1; /* chiếm 1 phần */
+            padding: 20px;
+            color: white;
+            border-radius: 0 8px 8px 0;
+        }
+      
+        #noidung{
+            background-image: url(https://cdcangiang.vn/wp-content/uploads/2023/06/NgayGD_VN.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            flex:3;
+        }
+        #end {
+            background-color: gray ;
+            font-size: larger;
+            text-align: center;
+            margin:0;
+        }
+        #content {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 10PX;
+            align-items: stretch;}
+    </style>
+</head>
+<body>
+    <div id="header">
+        Trang chủ của tôi 
+    </div>
+    <div id="chucnang">
+        <ul>
+            <li>Trang Chủ</li>
+            <li>Giới Thiệu</li>
+            <li>Dịch Vụ</li>
+            <li>Liên Hệ</li>
+        </ul>
+    </div>
+    <div id="content">
+        <div id="noidung">
+            <h1><img src="https://icons.iconarchive.com/icons/iconarchive/mothers-day/256/Bear-icon.png" width="40px" height="40px"><b>5 CÁCH DẠY TRẺ ĐỘC LẬP TỪ NHỎ</b></h1>
+            <p>Việc rèn luyện tính tự lập cho trẻ ngay từ sớm vô cùng quan trọng. Dưới đây là 5 cách đơn giản để bố mẹ bắt đầu:</p>
+            <ol>
+                <p><b>Giao việc cho trẻ:</b>Cho trẻ dọn đồ chơi sau khi ăn, lấy khăn lau bàn,...</p>
+                <p><b>Để trẻ lựa chọn:</b>Cho trẻ chọn áo mặc, chọn đồ ăn trong mức cho phép,...</p>
+                <p><b>Tạo thói quen hằng ngày:</b>Như tự đánh răng, mặc quần áo, đi dép.</p>
+                <p><b>Khen ngợi đúng cách:</b>Khuyến khích sự cố gắng thay vì kết quả.</p>
+                <p><b>Kiên nhẫn không làm thay bé:</b>Để trẻ làm sai, sửa sai và học hỏi từ đó.Việc xây dựng tính tự lập cần thời gian và sự kiên trì của cả gia đình.Hãy bắt dầu từ những điều nhỏ nhất mỗi ngày nhé!</p>
+            </ol>
+        </div>
+        <div id="thanhben" >Thanh Bên</div>
+    </div>
+    <div id="end">
+        <p>@2025 bản quyền này thuộc về tôi</p>
+    </div>
+</body>
+</html>
