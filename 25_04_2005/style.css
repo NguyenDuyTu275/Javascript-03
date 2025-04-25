@@ -19,7 +19,7 @@ ul {
     padding: 0;
   }
 
-li {
+ul>li {
     margin: 8px auto;
     padding: 10px;
     border-radius: 6px;
@@ -31,15 +31,14 @@ li:nth-child(odd) {
 .evening {
     background-color: #e6faff;
   }
-.morning {
+.morning.important {
   background-color:#f5a86b;
+  font-weight: 600;
 }
 .afternoon {
   background-color:white;
 }
-.important {
-    font-weight: 600;
-  }
+
 
 input[type="checkbox"] {
     margin-right: 10px;
