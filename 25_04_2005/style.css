@@ -35,7 +35,7 @@ li:nth-child(odd) {
   background-color:#f5a86b;
   font-weight: 600;
 }
-.afternoon {
+.afternoon.important {
   background-color:white;
 }
 
