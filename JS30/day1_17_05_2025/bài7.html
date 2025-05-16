@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function veTamGiac(n){
+            for (i=1;i<=n;i++){
+                for(h=1;h<=i;h++){
+                    document.write('*');
+                }
+                document.write('<br>');
+            }
+        }
+        var n=Number(prompt('Nhập số n:'));
+        veTamGiac(n);
+    </script>
+</body>
+</html>

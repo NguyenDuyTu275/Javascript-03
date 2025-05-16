@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function xepLoai(n){
+            if (n>=9) {
+                document.write('Xuất sắc');
+            } else if (n>=8) {document.write('Giỏi');}
+            else if (n>=6.5) {document.write('Khá');}
+            else if (n>=5) {document.write('Trung bình');}
+            else { document.write('Yếu');}
+        }
+        var n=Number(prompt('Nhập số n:'));
+        xepLoai(n);
+    
+    </script>
+</body>
+</html>
