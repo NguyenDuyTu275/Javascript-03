@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fibonacci(n){
+            day=[0,1];
+            for (let i=2;i<=n;i++){
+                day.push(day[i-1]+day[i-2]);
+            }
+            document.write(day[n-1]);
+        }var n=Number(prompt('nhập n:;'));
+        fibonacci(n);
+    </script>
+</body>
+</html>

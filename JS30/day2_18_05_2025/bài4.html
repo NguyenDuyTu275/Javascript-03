@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function kiemtra(str){
+            if (str.length>8 && /[A-Z]/.test(str) && /[a-z]/.test(str) && /[0-9]/.test(str)){      
+                document.write('mạnh');
+            } else {document.write('Không mạnh');}
+        }
+        var str=String(prompt('Nhập mật khẩu:'));
+        kiemtra(str);
+    </script>
+</body>
+</html>
