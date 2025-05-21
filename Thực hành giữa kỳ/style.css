@@ -57,10 +57,15 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    font-size: 32px;
+    font-weight: bold;
+    transition: background 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #e8491d;
+   background: linear-gradient(to right, #ff4d4d, #b30000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 
@@ -135,3 +140,4 @@ footer {
   border-radius: 5px;
   margin-bottom: 10px;
 }
+
