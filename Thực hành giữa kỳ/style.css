@@ -1,0 +1,137 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html, body {
+    height: 100%;
+    background: linear-gradient(to bottom right, #e0f8e0, #ffffff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+.wrapper {
+    max-width: 1200px;
+    width: 90%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 128, 0, 0.15);
+    max-height: 90vh; 
+    overflow-y: auto; 
+    display: flex;
+    flex-direction: column;
+}
+
+
+header {
+    background: #35424a;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #e8491d;
+}
+
+
+main {
+    flex-grow: 1; 
+    padding: 0 10px;
+}
+
+.content-block {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #fafafa;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    color: #35424a;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e8491d;
+    padding-bottom: 5px;
+}
+
+.service-card {
+    background: #f9f9f9;
+    padding: 15px;
+    margin: 10px 0;
+    border-left: 3px solid #e8491d;
+    color: #e8491d;
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #35424a;
+    color: #fff;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+.intro-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 128, 0, 0.2);
+}
+#dich-vu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; 
+  justify-content: center; 
+}
+
+.service-card {
+  background: #f9f9f9;
+  border-left: 3px solid #e8491d;
+  padding: 15px;
+  box-sizing: border-box;
+  color: #e8491d;
+  margin-bottom: 10px;
+
+  flex: 0 1 calc(50% - 20px); 
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.service-image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
