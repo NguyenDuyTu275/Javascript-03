@@ -44,14 +44,8 @@ button {
 
 }
 
-button:hover {
-  background-color: aquamarine;
-}
-
 .dau {
   background-color: #ffc400;
 }
 
-.dau:hover {
-  background-color: #e6ac00;
-}
+

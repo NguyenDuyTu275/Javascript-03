@@ -1,0 +1,105 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nunito", sans-serif;
+}
+.bar{
+  background-color:#DA4639;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:5px 10px;
+  color:white;
+}
+.bar a{
+  color:white;
+  text-decoration: none;
+}
+.bar img{
+  width:40px;
+  height: 40px;
+  margin-left: 15px;
+}
+.logo-banner{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:5px 10px;
+}
+.flexboxx{
+  display: flex;
+  align-items: center;
+  background-color: #eee;
+  padding:10px 15px
+}
+.phongto {
+  font-size: 28px;
+}
+.thunho{
+  margin-left: 20px;
+  margin-right: 20px;
+  max-width: 100px;
+  font-weight: 100;
+  font-size: 10px;
+}
+.logo-banner h1{
+  font-size: 40px;
+}
+.logo-banner .red{
+  color:red
+}
+.flexboxx button{
+  background-color: #DA4639;
+  color:white;
+  border:none;
+  padding:10px 15px
+}
+.main-nav{
+  background:#f8f8f8;
+  display:flex;
+  padding:1rem;
+  justify-content: flex-start;
+  gap:1.5rem;
+  border-top:1px solid #ddd;
+  border-bottom:1px solid #ddd;
+}
+.main-nav a{
+  text-decoration: none;
+  color:black;
+  font-weight: bold;
+}
+.icon  {
+    justify-self: flex-end;
+    color: #ddd;
+    font-size: larger;
+}
+.main-nav a.selected{
+  color: red;
+}
+.feature-posts {
+  display:flex;
+  justify-content: center;
+  gap:0.5rem;
+  padding:0.5rem;
+}
+.k{
+  position: relative;
+  width:33%;
+  height:300px;
+  color:white;
+  background-size: cover;
+  background-position: center;
+  padding:1rem;
+}
+.category{
+  padding:0.3rem 0.7rem;
+  font-size:0.8rem;
+  border-radius:4px;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+.tech {background-color: #3b82f6;}
+.env {background-color: #a855f7;}
+.food {background-color: #22c55e;}
