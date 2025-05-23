@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var mang=[1,9,3,8,5,6];
+        document.write(mang.length+'<br>');
+        document.write(mang.join('-')+'<br>');
+        var mang2=['a','b','c'];
+        document.write(mang.concat(mang2)+'<br>');        
+        document.write(mang.slice(0,3)+'<br>');
+        document.write(mang.sort()+'<br>');
+        var mang3=mang.slice().sort();
+        document.write(mang3.reverse()+'<br>');
+        mang.push(10,12);
+        document.write(mang+'<br>');
+        mang.pop();
+        document.write(mang+'<br>');
+        mang.unshift('f','g','h');
+        document.write(mang+'<br>');
+        mang3.shift();
+        document.write(mang3+'<br>');
+        
+    </script>
+    <p id="hello"> Chào mừng các bạn đến với trang web của mình </p>
+    <h3>Xin chào</h3>
+	<p id="zent">Zent Coding School</p>
+	<select>
+		<option class="car" value="Audi" >Audi</option>
+		<option class="car" value="BMW">BMW</option>
+		<option class="car" value="Mercedes">Mercedes</option>
+		<option class="car" value="Volvo">Volvo</option>
+	</select>
+	<h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. </h3>
+	<h2>Khoa CNTT</h2>
+    <script>
+        var hel=document.getElementById('hello').innerHTML;
+        alert(hel);
+        var trang=document.getElementById('zent');
+        trang.innerHTML='Zent';
+        var chon=document.getElementsByTagName('select');
+        
+    </script>
+    <p>Bạn có thể click vào button bên dưới và xem kết quả</p>
+	<button onclick="myFunction()">Click me</button>
+	<p id="demo"></p>
+	<script type="text/javascript">
+		function myFunction() {
+			document.getElementById('demo').innerHTML = "Zent Group";
+		}
+	</script>
+    <img src="facebook.png" onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" 
+width="32" height="32" alt="Smiley">
+	<script type="text/javascript">
+		function bigImg(x) {
+			x.style.height = "64px";
+			x.style.width = "64px";
+		}
+		function normalImg(x) {
+			x.style.height = "32px";
+			x.style.width = "32px";
+		}
+	</script>
+    
+</body>
+</html>
