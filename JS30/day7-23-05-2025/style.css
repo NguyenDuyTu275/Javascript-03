@@ -47,10 +47,8 @@ body{
 }
 .dapan div{
     width: 33.33%;
-    margin: 10px;
     aspect-ratio: 1/1;
     box-sizing: border-box;
-    border: 3px solid #aaa;
     display: flex;
     justify-content: center;
     align-items: center;
