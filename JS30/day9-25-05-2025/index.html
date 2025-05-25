@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 9</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="doihinhnen">
+        <h1>Chọn ảnh nền trang</h1>
+        <select id="hinhnen" >
+            <option value="nui.jpg" selected>Núi non</option>
+            <option value="bien.jpg">Biển cả</option>
+            <option value="anime.jpg">Anime</option>
+            <option value="hieuthuhai.jpg">Hiếu Thứ Hai</option>
+        </select>
+        <button onclick="doihinhnen()"> Đổi ảnh nền </button>
+    </div>
+    <script>
+        function doihinhnen(){
+            const doianh=document.getElementById('hinhnen');
+            const source=doianh.value;
+            document.body.style.backgroundImage=`url('${source}')`;
+        }
+    </script>
+</body>
+</html>

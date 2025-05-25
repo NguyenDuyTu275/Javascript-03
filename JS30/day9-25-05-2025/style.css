@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image:url('nui.jpg') ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+.doihinhnen{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 45px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: whitesmoke;
+    max-width: 250px;
+    background-color: rgba(255,255,255,0.35);
+}
+select{
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    height: 25px;
+    margin-bottom: 25px;
+    background-color: #eee;
+}
+.h1{
+    text-align: center;
+    text-decoration: none;
+}
