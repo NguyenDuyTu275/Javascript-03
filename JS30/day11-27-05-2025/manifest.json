@@ -1,0 +1,13 @@
+{
+    "manifest_version":3,
+    "name":"thay doi tieu de",
+    "version":"1.0",
+    "description":"thay doi tieu de",
+    "content_scripts":[
+        {
+            "matches":["https://vnexpress.net/*"],
+            "js":["index.js"],
+            "run_at":"document_idle"
+        }
+    ]
+}
