@@ -18,7 +18,7 @@ function anhsau() {
     if (vitri < soanh.length - 1) {
         vitri++;
     } else {
-        vitri = 0;  // sửa ở đây
+        vitri = 0;  
     }
     chieuanh();
 }
@@ -27,7 +27,7 @@ function anhtruoc() {
     if (vitri > 0) {
         vitri--;
     } else {
-        vitri = soanh.length - 1;  // sửa ở đây
+        vitri = soanh.length - 1;  
     }
     chieuanh();
 }
