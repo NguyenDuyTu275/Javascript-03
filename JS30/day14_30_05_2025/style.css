@@ -1,0 +1,22 @@
+body{ 
+    margin: 15px;
+    padding: 15px;
+    text-align: center;
+}
+.khung{
+    display: block;
+    border-radius: 16px;
+    box-shadow: #aaa;
+    background-color: antiquewhite;
+}
+
+.khung button{
+    display: flex;
+    align-items: flex-end;
+    justify-self: center;
+}
+table{
+    width: 100%;
+    height: auto;
+    border:2px solid red;
+}

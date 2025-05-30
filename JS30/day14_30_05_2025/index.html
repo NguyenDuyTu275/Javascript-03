@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 14</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 align="center"><b>Thêm sinh viên vào danh sách</b></h1>
+    <div class="khung">
+        <h3>Mã sinh viên:</h3>
+        <input id="masv" type="text">
+        <h3>Họ và tên:</h3>
+        <input id="name" type="text">
+        <h3>Email:</h3>
+        <input id="mail" type="email">
+        <h3>Số điện thoại:</h3>
+        <input id="sdt" type="number">
+        <button onclick="them()" id="nut">Thêm</button>
+    </div>
+    <table id="table" border="2" cellpadding="5">
+        <tr>
+            <td class="cot">Mã SV</td>
+            <td class="cot">Họ và tên</td>
+            <td class="cot">Email</td>
+            <td class="cot">SĐT</td>
+            <td class="cot">Hành động</td>
+        </tr>
+    </table>
+    <script >
+        let edittingrow=null;
+        function them(){
+    const masv=document.getElementById("masv");
+    const name=document.getElementById("name");
+    const mail=document.getElementById("mail");
+    const sdt=document.getElementById("sdt");
+    var nut=document.querySelector(".nut");
+    if (edittingrow){
+        edittingrow.cells[0].textContent=masv.value;
+        edittingrow.cells[1].textContent=name.value;
+        edittingrow.cells[2].textContent=mail.value;
+        edittingrow.cells[3].textContent=sdt.value;
+        edittingrow=null;
+        document.getElementById("nut").textContent="Thêm";
+    }else {
+        const row=document.createElement("tr");
+        [masv,name,sdt,mail].forEach(function(input){
+        const td=document.createElement("td");
+        td.textContent=input.value;
+        row.appendChild(td);
+    });
+    const row1=document.createElement("td");
+    row1.innerHTML=`<button onclick="edit(this)" >Sửa</button>`;
+    row.appendChild(row1);
+    
+    table.appendChild(row);
+    
+}
+    document.getElementById("masv").value='';
+    document.getElementById("name").value='';
+    document.getElementById("sdt").value='';
+    document.getElementById("mail").value='';
+    } 
+    function edit(button){
+        const sua=button.parentElement.parentElement;
+        document.getElementById("masv").value=sua.cells[0].textContent;
+        document.getElementById("name").value=sua.cells[1].textContent;
+        document.getElementById("sdt").value=sua.cells[2].textContent;
+        document.getElementById("mail").value=sua.cells[3].textContent;
+        edittingrow=sua;
+        document.getElementById("nut").textContent="Lưu";
+    }
+
+    </script>
+
+</body>
+</html>
