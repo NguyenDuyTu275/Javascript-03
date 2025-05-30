@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    function Student() {
+    this.name = 'Nam';
+    this.gender = 'Male';
+}
+
+var studObj1 = new Student();
+studObj1.age = 15;
+alert(studObj1.age); // 15
+
+var studObj2 = new Student();
+alert(studObj2.age); 
+function Student() {
+    this.name = 'John';
+    this.gender = 'M';
+}
+
+Student.prototype.age = 15;
+
+var studObj1 = new Student();
+alert(studObj1.age); // 15
+
+var studObj2 = new Student();
+alert(studObj2.age); // 15
+
+class Person{
+            name;
+            age;
+            salary;
+            constructor() {  
+                document.write("Hihi");
+            }  
+            hello(){
+                document.write("Hello "+ this.name);
+             }
+        }
+        a=new Person;
+        a.name= "Tu";
+        a.age=19;
+        a.salary=5000000;
+        document.write(a.name+"<br>"+a.age+"<br>"+a.salary);
+        a.hello;
+    
+   </script>
+</body>
+</html>
