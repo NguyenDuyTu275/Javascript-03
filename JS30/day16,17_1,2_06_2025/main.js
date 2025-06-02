@@ -1,3 +1,5 @@
+
+
 class product {
     constructor(id, name, price, quantity) {
         this.id = id;
@@ -44,11 +46,10 @@ function edit() {
             }
         }
         document.getElementById("spdatnhat").innerText = `Sản phẩm đắt nhất là: ${pricemax.name}`;
-    } else {
-        document.getElementById("spdatnhat").innerText = `Không có sản phẩm nào`;
     }
 }
-
+let editmode=false;
+let currentEdit=null;
 function them() {
     let id = document.getElementById("masp").value.trim();
     let name = document.getElementById("name").value.trim();
@@ -59,10 +60,18 @@ function them() {
         alert('Vui lòng nhập đầy đủ và đúng định dạng!');
         return;
     }
-
-    storage.push(new product(id, name, gia, soluong));
-    edit();
-
+    let trung=storage.findIndex(sp=> sp.id===id);
+    if (trung!==-1){
+        if (confirm("ID đã tồn tại bạn có muốn cập nhật không?")){
+            storage[trung]=new product(id,name,gia,soluong);
+            edit();
+        } else { return;}
+        } else { 
+           let sp=new product(id,name,gia,soluong);
+           storage.push(sp);
+           append(sp);
+        }
+        
    
     document.getElementById("masp").value = '';
     document.getElementById("name").value = '';
@@ -82,5 +91,23 @@ function sua(id) {
         document.getElementById("name").value = sp.name;
         document.getElementById("gia").value = sp.price;
         document.getElementById("soluong").value = sp.quantity;
+        editmode=true;
+        currentEdit=id;
+        document.getElementById("submit").innerText="Cập nhật"
     }
+}
+function append(sp){
+    let tbody=getElementById('tbody');
+    let row=createElement("tr");
+    row.innerHTML=`
+    <td>${sp.id}</td>
+    <td>${sp.name}</td>
+    <td>${sp.gia}</td>
+    <td>${sp.soluong}</td>
+    <td>${sp.price*sp.soluong}</td>
+    <td>
+        <button onclick="sua('${sp.id}')">Sửa</button>
+        <button onclick="xoa('${sp.id}')">Xoá</button>
+    </td>`;
+    tbody.appendChild(row);
 }

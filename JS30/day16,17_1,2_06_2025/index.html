@@ -13,18 +13,20 @@
         <input type="number" id="gia">
         <input type="number" id="soluong">
     </div>
-    <button onclick="them()">Thêm</button>
-    <div id="table">
+    <button id="submit" onclick="them()">Thêm</button>
+    <table id="table">
         <thead>
+            <tr>
             <td id="cot">ID</td>
             <td id="cot" >Name</td>
             <td id="cot"> Giá</td>
             <td id="cot">Số Lượng</td>
             <td id="cot">Tổng</td>
             <td id="cot"> Hành Động</td>
+            </tr>
         </thead>
         <tbody id="tbody"></tbody>
-    </div>
+    </table>
     <p id="sum">Tổng giá trị hàng tồn kho là:</p>
     <p id="spdatnhat">Sản phẩm đắt nhất là:</p>
     <script src="./main.js"></script>
