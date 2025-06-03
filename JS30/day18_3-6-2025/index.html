@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day16</title>
+</head>
+<body>
+    <h1>QUẢN LÝ SẢN PHẨM</h1>
+    <div class="nhap">
+        <input type="text" id="masp">
+        <input type="text" id="name">
+        <input type="number" id="gia">
+        <input type="number" id="soluong">
+    </div>
+    <div class="nut">
+        <button id="submit" onclick="them()">Thêm</button>
+        <div class="timkiem">
+            <input type="text" id="searchid" placeholder="Nhập sp">
+            <button  onclick="search()">Tìm Kiếm</button>
+        </div>
+
+    </div>
+
+    <table id="table" border="1" style="border-collapse:collapse ;" style="border: 2px solid ;">
+        <thead>
+            <tr>
+            <td id="cot">ID</td>
+            <td id="cot" >Name</td>
+            <td id="cot"> Giá</td>
+            <td id="cot">Số Lượng</td>
+            <td id="cot">Tổng</td>
+            <td id="cot"> Hành Động</td>
+            </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+    <p id="sum">Tổng giá trị hàng tồn kho là:</p>
+    <p id="spdatnhat">Sản phẩm đắt nhất là:</p>
+    <script src="./main.js"></script>
+</body>
+</html>

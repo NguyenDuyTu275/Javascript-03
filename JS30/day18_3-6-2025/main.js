@@ -65,7 +65,6 @@ function them() {
         if (confirm("ID đã tồn tại bạn có muốn cập nhật không?")){
             storage[trung]=new product(id,name,gia,soluong);
             edit();
-            
         } else { return;}
         } else { 
            let sp=new product(id,name,gia,soluong);
@@ -111,4 +110,29 @@ function append(sp){
         <button onclick="xoa('${sp.id}')">Xoá</button>
     </td>`;
     tbody.appendChild(row);
+}
+function search(){
+    const searchid=document.getElementById("searchid").value.trim();
+    const tbody=document.getElementById('tbody');
+    if (!searchid){
+        alert('Vui lòng nhập sản phẩm muốn tìm');
+        return;
+    }
+    const sp=storage.find(item=>item.id===searchid);
+    if (sp){
+        tbody.innerHTML=`
+        <tr>
+            <td>${sp.id}</td>
+            <td>${sp.name}</td>
+            <td>${sp.price}</td>
+            <td>${sp.quantity}</td>
+            <td>${sp.price*sp.quantity}</td>
+            <td>
+                <button onclick="sua('${sp.id}')">Sửa</button>
+                <button onclick="xoa('${sp.id}')">Xóa</button>
+            </td>
+        </tr>`;
+    } else {
+        tbody.innerHTML=`<tr><td colspan='6'>not found</td></tr>`;
+    }
 }
