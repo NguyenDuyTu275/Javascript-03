@@ -2,17 +2,15 @@ body,html{
     margin: 0;
     padding: 0;
     height: 100%;
-    background: #092c3f;
+    background: radial-gradient(rgb(20, 21, 38));
     font-family: myFont;
 }
 @font-face {
     font-family: myFont;
     src: url(./TDF_cut-putroe-navisha-kyokm3.otf);}
-header{
-    text-align: center;
+a{
     text-decoration: none;
-    color: aqua;
-    
+    color:white;
     font-size: 60px;
     display: flex;
     justify-content: flex-start;
@@ -22,13 +20,14 @@ header{
     align-items: center;
     justify-self: center;
     font-family: myFont;
+    font-size: 70px;
 }
 .trang1 button{
     display: flex;
     align-items: center;
     justify-self: center;
 }
-.start{
+.trang1 button{
     width: 180px;
     height: 180px;
     background-color: #092c3f;
@@ -64,7 +63,6 @@ h1{
     font-weight: 600;
     color: aliceblue;
 }
-header.hover{
-    color: #1b52f8;
-
+a:hover{
+    color:rgb(27, 170, 228);
 }
