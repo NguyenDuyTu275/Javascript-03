@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: MyFont;
+    src: url(./TDF_cut-putroe-navisha-kyokm3.otf);
+}
+body,html{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: bisque;
+}
+.signin {
+    background-color: #fff;
+    display:block;
+    padding: auto;
+    width: 900px;
+    height: 600px;
+    border-radius: 15%; 
+   margin: 20px;
+    
+}
+.signin h1{
+    font-family: MyFont;
+    font-size: 40px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ button{
+    margin: auto;
+    width: 100px;
+    height: 20px;
+    display: flex;
+    justify-self: center;
+    border: 0px ;
+    border-radius: 35%;
+    text-align: center;
+    cursor: pointer;
+}   
+input{
+    border:0px ;
+    display: flex;
+    justify-self:  center;
+    padding: auto;
+    height: 25px;
+    width: 200px ;
+    height: auto;
+    padding: 20px;
+    text-align: center;
+}
+p{
+    text-align: center;
+    font-family: MyFont;
+    font-size: 20px;
+    font-weight: 500    ;
+
+}
