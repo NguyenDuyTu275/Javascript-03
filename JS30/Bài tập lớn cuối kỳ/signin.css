@@ -13,13 +13,30 @@ body,html{
     align-items: center;
     background-color: bisque;
 }
+.cont{
+  overflow:hidden;
+  margin:auto;
+  position: relative;
+  width: 900px;
+  height: 590px;
+  padding: auto;
+  margin-bottom: 20px;
+  
+}
+.social-media ul{
+  text-align: center;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+.social-media img{
+  margin: 10px;
+}
 .signin {
     background-color: #fff;
     display:block;
     padding: auto;
-    width: 900px;
-    height: 600px;
-    border-radius: 15%; 
    margin: 20px;
    overflow: hidden;
     
@@ -31,6 +48,14 @@ body,html{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.signin a{
+  text-decoration: none;
+  color: black;
+}
+.singin a:hover{
+  color:aquamarine;
+  transform: scale(1.2);
 }
 button{
   display:block;
