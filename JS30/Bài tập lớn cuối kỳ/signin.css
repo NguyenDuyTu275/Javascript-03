@@ -17,9 +17,9 @@ body, html {
 }
 
 .cont {
-  overflow: hidden;
+
   margin: auto;
-  position: relative;
+
   width: 900px;
   height: 590px;
   padding: auto;
