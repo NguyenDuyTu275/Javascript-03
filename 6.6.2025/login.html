@@ -12,7 +12,7 @@
         <input type="text" id="username">
         <label>password</label>
         <input type="password" id="password">
-        <button type="submit" id="submit" >Submit</button>
+        <button type="submit" id="submit" onclick="submit1()">Submit</button>
     </div>
     <script>
         
@@ -20,17 +20,19 @@
         if (localStorage.getItem('trangthai')==="true"){
             window.location.href="admin.html";
         }
-        document.getElementById('loginform').addEventListener('submit',function(e){
-            e.preventDefault();
+        function submit1(){
+            
             let user=document.getElementById("username").value;
-            let pass=documetn.getElementById("password").value;
-        if (user==="admin" && pass==='password123'){
+            let pass=document.getElementById("password").value;
+            if (user==="admin" && pass==='password123'){
             localStorage.setItem('trangthai','true');
             console.log('đang chuyển ...');
             window.location.href='admin.html';
         }
         else { alert('vui lòng nhập lại');}
-        });
+        
+        }
+        
         
     </script>
 </body>
