@@ -57,7 +57,12 @@ header h1 {
     text-align: center;
     
 }
-
+nav {
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+    width: 1500px;
+}
 nav ul {
     list-style: none;
     display: flex;

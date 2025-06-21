@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .dots {
+            margin-top: 10px;
+            text-align: center;
+        }
+        .dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #bbb;
+            margin: 3px;
+            cursor: pointer;
+        }
+        .dot.active {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="khunganh">
+        <h1>Trinh chieu anh bang DOM</h1>
+        <img id="anhnen" src="hieuthuhai.jpg" alt="">
+        <div>
+            <button onclick="anhtruoc()">Truoc</button>
+            <button onclick="anhsau()">Sau</button>
+        </div>
+        <div class="dots" id="dotsContainer"></div> <!-- Chấm tròn -->
+    </div>
+
+    <script>
+        const danhsachanh = ["nui.jpg", "bien.jpg", "anime.jpg"];
+        let vitri = 0;
+        let tuDong = null;
+
+        function anhtruoc() {
+            vitri = (vitri + 1) % danhsachanh.length;
+            hienthianh();
+            resetTuDong();
+        }
+
+        function anhsau() {
+            vitri = (vitri - 1 + danhsachanh.length) % danhsachanh.length;
+            hienthianh();
+            resetTuDong();
+        }
+
+        function hienthianh() {
+            const anhhientai = document.getElementById("anhnen");
+            anhhientai.style.opacity = 0;
+            setTimeout(() => {
+                anhhientai.src = danhsachanh[vitri];
+                anhhientai.style.opacity = 1;
+                capnhatChamTron();
+            },100);
+        }
+
+        const dotsContainer = document.getElementById("dotsContainer");
+
+        function taoChamTron() {
+            dotsContainer.innerHTML = "";
+            danhsachanh.forEach((_, index) => {
+                const dot = document.createElement("span");
+                dot.classList.add("dot");
+                if (index === vitri) dot.classList.add("active");
+                dot.addEventListener("click", () => {
+                    vitri = index;
+                    hienthianh();
+                    resetTuDong();
+                });
+                dotsContainer.appendChild(dot);
+            });
+        }
+
+        function capnhatChamTron() {
+            const dots = document.querySelectorAll(".dot");
+            dots.forEach((dot, index) => {
+                dot.classList.toggle("active", index === vitri);
+            });
+        }
+
+        function tuDongChuyenAnh() {
+            tuDong = setTimeout(() => {
+                anhtruoc();
+                tuDongChuyenAnh();
+            }, 5000);
+        }
+
+        function resetTuDong() {
+            clearTimeout(tuDong);
+            tuDongChuyenAnh();
+        }
+
+        taoChamTron();
+        tuDongChuyenAnh();
+// Luồng xử lí 
+// -> mới vào trang 
+// -> tạo chấm tròn , tự động chuyển ảnh 
+// -> người dùng click gọi 2 hàm anhtruoc anhsau để set vị trí và hiển thị ảnh reset settimeout, cập nhật chấm tròn
+// -> click vào span thì cập nhật lại vitri theo index của nút và gọi lại hienthianh
+    </script>
+</body>
+</html>
