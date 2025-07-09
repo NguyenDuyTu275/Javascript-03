@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ Hàng</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="header-title">
+                <h1>Giỏ Hàng của Bạn</h1>
+            </div>
+            <div class="header-nav">
+                <nav>
+                    <div class="left">
+                        <ul>
+                            <li><a href="trangchu.html">Trang chủ</a></li>
+                            <li><a href="#gioi-thieu">Giới thiệu</a></li>
+                            <li><a href="#dich-vu">Dịch vụ</a></li>
+                            <li><a href="giohang.html">Giỏ Hàng</a></li>
+                        </ul>
+                    </div>
+                    <div class="right">
+                        <p>Xin Chào Bạn trở lại nhá!! </p>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div id="gio-hang" class="content-block">
+                <h2>Danh sách Sản phẩm trong Giỏ hàng</h2>
+                <div id="cart-items">
+                    <!-- Giỏ hàng sẽ được hiển thị ở đây -->
+                </div>
+            </div>
+        </main>
+
+        <footer id="lien-he">
+            <p>&copy; 2025 Công ty TNHH Công nghệ Số Việt. Tất cả bản quyền được bảo lưu.</p>
+            <p>Liên hệ: TuND.B24CC275@ptit.edu.vn | 0326025842</p>
+        </footer>
+    </div>
+
+    <script>
+        const currentUserEmail = 'user@example.com'; // Thay thế với email thực tế khi đăng nhập
+        let cartItems = JSON.parse(localStorage.getItem(currentUserEmail)) || [];
+        const cartContainer = document.getElementById('cart-items');
+
+        if (cartItems.length === 0) {
+            cartContainer.innerHTML = '<p>Giỏ hàng của bạn hiện đang trống.</p>';
+        } else {
+            cartItems.forEach(item => {
+                const itemElement = document.createElement('div');
+                itemElement.classList.add('cart-item');
+                itemElement.innerHTML = `
+                    <p>${item.name} - Số lượng: ${item.quantity}</p>
+                    <button class="remove-item" data-id="${item.id}">Xóa</button>
+                `;
+                cartContainer.appendChild(itemElement);
+            });
+        }
+
+        // Xử lý xóa sản phẩm khỏi giỏ hàng
+        cartContainer.addEventListener('click', (e) => {
+            if (e.target.classList.contains('remove-item')) {
+                const itemId = e.target.dataset.id;
+                cartItems = cartItems.filter(item => item.id !== itemId);
+
+                // Cập nhật lại giỏ hàng trong localStorage
+                localStorage.setItem(currentUserEmail, JSON.stringify(cartItems));
+
+                // Hiển thị lại giỏ hàng
+                location.reload(); // Tải lại trang để cập nhật giỏ hàng
+            }
+        });
+    </script>
+</body>
+</html>

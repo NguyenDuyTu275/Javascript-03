@@ -2,7 +2,9 @@ body,html{
     margin: 0;
     padding: 0;
     height: 100%;
-    background: radial-gradient(rgb(20, 21, 38));
+    background-image: url(social/night-time-scene-with-nature-glacier.jpg);
+     background-size: cover;
+    background-position: center;
     font-family: myFont;
 }
 @font-face {
@@ -27,21 +29,19 @@ a{
     align-items: center;
     justify-self: center;
 }
-.trangchu button{
-    width: 180px;
-    height: 180px;
-    background-color: #092c3f;
+button {
+    position: absolute; 
+    bottom: 30%; 
+    padding: 20px 40px;
+   background: linear-gradient(to right, #DE8291, #8A55D7);
     color: aliceblue;
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 48px;
     font-weight: bolder;
     cursor: pointer;
-    animation : heartbeat 1.5s infinite;
-    box-shadow: 0 0 30px #1b52f8;
-
+    animation: heartbeat 1.5s infinite;
+    box-shadow: 0 0 30px #325ee2;
+    z-index: 2;
 }
 @keyframes heartbeat {
     0% {

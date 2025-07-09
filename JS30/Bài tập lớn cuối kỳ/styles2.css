@@ -176,4 +176,55 @@ footer {
     margin-bottom: 20px;
     box-shadow: 0 4px 10px rgba(0, 128, 0, 0.2);
 }
+/*định dạng icon giỏ hàng*/
+.cart-icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
 
+.cart-img {
+    width: 24px;
+    height: 24px;
+}
+
+#cart-count {
+    font-size: 16px;
+    font-weight: bold;
+    color: #FF5733;
+}
+
+/* Định dạng nút "Thêm vào giỏ hàng" */
+.add-to-cart {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.add-to-cart:hover {
+    background-color: #45a049;
+}
+#service-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.service-card {
+    width: 30%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
