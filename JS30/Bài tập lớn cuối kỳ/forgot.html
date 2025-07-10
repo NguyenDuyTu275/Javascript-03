@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quên Mật Khẩu</title>
+    <style>
+       
+.forgot-password-container {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+#forgot-email {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#forgot-submit {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#forgot-submit:hover {
+    background-color: #45a049;
+}
+
+#message {
+    margin-top: 20px;
+    color: red ;
+}
+
+    </style>
+</head>
+<body>
+    <div class="forgot-password-container">
+        <h2>Quên Mật Khẩu</h2>
+        <form id="forgot-password-form">
+            <label for="forgot-email">Nhập Email của bạn:</label>
+            <input type="email" id="forgot-email" placeholder="Nhập email của bạn" required>
+            <button type="submit" id="forgot-submit">Lấy lại mật khẩu</button>
+        </form>
+        <p id="message"></p>
+    </div>
+
+    <script >
+        document.getElementById("forgot-password-form").addEventListener("submit", function(event) {
+    event.preventDefault(); 
+
+    const email = document.getElementById("forgot-email").value.trim();
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+    const user = users.find(user => user.email === email);
+
+    if (user) {
+        document.getElementById("message").textContent = `Mật khẩu của bạn là: ${user.password}`;
+        
+    } else {
+        document.getElementById("message").textContent = "Không tìm thấy tài khoản với email này!";
+     
+    }
+});
+
+    </script>
+</body>
+</html>

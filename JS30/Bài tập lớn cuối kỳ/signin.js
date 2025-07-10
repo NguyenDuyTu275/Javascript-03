@@ -2,7 +2,7 @@ document.querySelector('.img-btn').addEventListener('click',function(){
     document.querySelector('.cont').classList.toggle('s-signup')
 }
 );
-// hàm đky 
+
 document.getElementById("signup-btn").addEventListener("click", function(){
     const username = document.getElementById("username").value;
     const email = document.getElementById("email").value;
